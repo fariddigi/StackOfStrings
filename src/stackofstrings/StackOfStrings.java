@@ -64,6 +64,26 @@ public class StackOfStrings {
         c.enqueue("Desktop");
         c.enqueue("Pencil");
         System.out.println(c.dequeue());
+        
+        ArraysQueue d = new ArraysQueue(6);
+         d.enqueue("Farid");
+        d.enqueue("Desktop");
+        d.enqueue("Pencil");
+        d.enqueue("Board");
+        d.enqueue("chess");
+
+
+        System.out.println(d.dequeue());
+        System.out.println(d.dequeue());
+        System.out.println(d.dequeue());
+        d.enqueue("tennis");
+         System.out.println(d.dequeue());
+        System.out.println(d.dequeue());
+        System.out.println(d.dequeue());
+
+
+        System.out.println(d.size());
+
 
 
     }
