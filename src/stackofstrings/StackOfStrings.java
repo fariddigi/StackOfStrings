@@ -50,6 +50,24 @@ public class StackOfStrings {
         a.push("Desktop");
         a.push("Pencil");
         System.out.println(a.pop());
+        
+        ArraysStack b= new ArraysStack(3);
+        b.push("Farid");
+        b.push("Desktop");
+        b.push("Pencil");
+        System.out.println(b.pop());
+        
+        
+        //
+        QueueOfStrings c= new QueueOfStrings();
+        c.enqueue("Farid");
+        c.enqueue("Desktop");
+        c.enqueue("Pencil");
+        System.out.println(c.dequeue());
+
+
     }
+    
+        
     
 }
