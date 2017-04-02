@@ -28,7 +28,7 @@ public class ArraysStack {
    public String pop(){
        String item = s[--N];
        s[N]= null;
-       return s[--N];
+       return item;
    }
    
    public boolean isEmpty(){
