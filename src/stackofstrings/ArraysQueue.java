@@ -24,6 +24,7 @@ public class ArraysQueue {
     
      public void enqueue (String item)
     {
+      if (s.length == N) resize (2*s.length);
         s[N++]= item;
     }
     
@@ -34,6 +35,16 @@ public class ArraysQueue {
         s[front]=null;
         return item;
 
+    }
+    
+    private void resize (int capacity){
+        String [] copy = new String [capacity];
+        for (int i = 0; i < 10; i++) {
+            copy[i]= s[i] ;
+                    s= copy;
+        }
+        
+        
     }
     
     public boolean isEmpty(){
