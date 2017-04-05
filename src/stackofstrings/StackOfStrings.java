@@ -9,18 +9,18 @@ package stackofstrings;
  *
  * @author faridrh
  */
-public class StackOfStrings {
+public class StackOfStrings <Item>{
     
     private Node first= null;
 
     
     private class Node {
-        String item;
+        Item item;
         Node next;
     }
    
     
-   public void push (String item){
+   public void push (Item item){
        
        Node oldfirst= first;
        first= new Node();
@@ -28,9 +28,9 @@ public class StackOfStrings {
        first.next= oldfirst; 
     }
     
-   public String pop(){
+   public Item  pop(){
        
-        String item = first.item;
+        Item item = first.item;
         first = first.next;
         return item;
    }
@@ -48,7 +48,7 @@ public class StackOfStrings {
         StackOfStrings a = new StackOfStrings();
         a.push("Farid");
         a.push("Desktop");
-        a.push("Pencil");
+        a.push(64);
         System.out.println(a.pop());
         
         ArraysStack b= new ArraysStack(3);
@@ -75,11 +75,10 @@ public class StackOfStrings {
 
         System.out.println(d.dequeue());
         System.out.println(d.dequeue());
+         System.out.println(d.dequeue());
         System.out.println(d.dequeue());
         d.enqueue("tennis");
          System.out.println(d.dequeue());
-        System.out.println(d.dequeue());
-        System.out.println(d.dequeue());
 
 
         System.out.println(d.size());
